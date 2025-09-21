@@ -1,0 +1,74 @@
+body {
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+    
+    /* Custom animations */
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+    
+    .floating {
+      animation: float 3s ease-in-out infinite;
+    }
+    
+    /* Custom cursor effect for project cards */
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 25px -5px rgba(147, 51, 234, 0.4), 0 10px 10px -5px rgba(147, 51, 234, 0.4);
+      transition: all 0.3s ease;
+    }
+    
+    /* Smooth hover effects */
+    .nav-link:hover {
+      color: #4f46e5;
+      transform: scale(1.05);
+      transition: all 0.2s ease;
+    }
+    
+    .btn-primary {
+      background: linear-gradient(135deg, #6366f1, #8b5cf6);
+      color: white;
+      transition: all 0.3s ease;
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px -5px rgba(107, 114, 128, 0.1);
+    }
+    
+    /* Section divider */
+    .section-divider {
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, #6366f1, #8b5cf6);
+      margin: 1rem auto;
+      border-radius: 2px;
+    }
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem; /* px-6 py-3 */
+  background: #ffffff;
+  color: #3730a3; /* Tailwind indigo-700 */
+  text-decoration: none;
+  border-radius: 9999px; /* rounded-full */
+  font-weight: 500;
+  box-shadow: 0 8px 20px rgba(2,6,23,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  animation: float 3s ease-in-out infinite;
+  position: relative;
+  z-index: 20;
+}
+
+@keyframes float {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+.btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 40px rgba(99,102,241,0.18), 0 0 30px rgba(99,102,241,0.08);
+}
